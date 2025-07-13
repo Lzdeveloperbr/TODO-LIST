@@ -2,26 +2,51 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>LzClub - Todo list</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Lista de tarefas minimalista da LzClub" />
+  <meta name="author" content="LzClub" />
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>LzClub - Lista de Tarefas</title>
 </head>
 
 <body>
-    <div class="container">
-        <h1>LzClub</h1> <!-- Título visível adicionado aqui -->
-        <input class="input-task" placeholder="O que tenho que fazer...">
-        <button class="button-add-task">Adicionar</button>
+  <main class="container">
+    <header>
+      <h1>LzClub</h1>
+    </header>
 
-        <ul class="list-tasks">
-            <!-- Tarefas serão listadas aqui -->
-        </ul>
-    </div>
+    <section class="task-input">
+      <label for="input-task" class="sr-only">Adicionar nova tarefa</label>
+      <input
+        id="input-task"
+        class="input-task"
+        type="text"
+        placeholder="O que tenho que fazer..."
+        aria-label="Campo para adicionar tarefa"
+      />
+      <button class="button-add-task" aria-label="Adicionar tarefa">Adicionar</button>
+    </section>
+
+    <section>
+      <ul class="list-tasks" aria-label="Lista de tarefas">
+        <!-- Tarefas serão inseridas dinamicamente aqui -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>
